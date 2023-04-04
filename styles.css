@@ -1,0 +1,114 @@
+
+body {
+    margin:0;
+    padding:0;
+
+    /* width does not work */
+}
+* {
+    font-family:'Times New Roman', Times, serif
+}
+.container {
+    height:100vh;
+    width:100%;
+    display:grid;
+    grid-template-columns:40% auto;
+}
+.imageSection {
+    background-image: url(media/7.jpg);
+    background-clip:border-box;
+    background-size:cover;
+    background-attachment:local;
+}
+h1 {
+    text-align:center;
+    font-size:4rem;
+}
+.formSection {
+    background-color:#eae2b7;
+    display:flex;
+    flex-direction:column;
+    gap:10%;
+}
+
+.fields > div {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+form {
+    background-image:url(media/16.jpg);
+    background-repeat:no-repeat;
+    background-position:top;
+    padding:3em;
+    background-attachment:fixed;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    box-shadow:2px 4px hsl(43, 74%, 36%)
+}
+.fieldContainer {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.fields {
+    display:grid;
+    align-content:center;
+    grid-template-columns:repeat(2, 1fr);
+    gap:10%;
+}
+input {
+    padding:1em 1em;
+}
+label {
+    color:hsl(43, 74%, 36%);
+    font-weight:bold;
+    text-transform:uppercase;
+    font-family:inherit;
+    font-size:1.1rem;
+}
+
+h1 {
+    color:hsl(43, 74%, 36%);
+}
+input:focus {
+    outline:none;
+    border: 2px solid hsl(43, 74%, 36%);
+}
+button {
+
+    position:relative;
+    padding:1.1em;
+    border-radius:6%;
+    background-color:hsl(43, 74%, 86%);
+    color:hsl(43, 74%, 36%);
+    font-weight:bold;
+    border:1px solid hsl(43, 74%,  66%);
+    margin-top:min(30px, 5%);
+    cursor:pointer;
+}
+.button {
+    width:210%;
+}
+@media (max-width:600px) {
+    .container {
+        grid-template-columns:50% 50%;
+    }
+    .fields  {
+        grid-template-columns:repeat(1, 1fr);
+        grid-gap:3%;
+    }
+    .formSection {
+        gap:3%;
+    }
+}
+p {
+    margin-left:5%;
+}
+.anchor {
+    color:hsl(14, 46%, 54%)
+}
+.anchor:hover, .anchor:active, .anchor:focus {
+    color:hsl(14, 46%, 74%);
+}
