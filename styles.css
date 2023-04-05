@@ -12,6 +12,7 @@ body, .container {
     height:100vh;
     overflow-y:hidden;
 }
+
 * {
     font-family:'Times New Roman', Times, serif
 }
@@ -111,7 +112,6 @@ button {
     .imageSection, .formSection {
         height:100vh;
         width:100vw;
-        overflow:hidden;
     }
     .container {
         display:flex;
