@@ -10,6 +10,7 @@ body, .container {
 }
 .imageSection, .formSection {
     height:100vh;
+    overflow-y:hidden;
 }
 * {
     font-family:'Times New Roman', Times, serif
@@ -34,7 +35,6 @@ h1 {
     display:flex;
     flex-direction:column;
     gap:10%;
-    overflow-y:hidden;
 }
 
 .fields > div {
