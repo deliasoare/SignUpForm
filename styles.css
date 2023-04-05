@@ -106,12 +106,14 @@ button {
     width:210%;
 }
 @media (max-width:800px) {
-    html {
-        overflow-y:none;
+    body::webkit-scrollbar {
+        display:none;
     }
+
     .imageSection, .formSection {
         height:100vh;
         width:100vw;
+        overflow-x:hidden;
     }
     .container {
         display:flex;
