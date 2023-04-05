@@ -20,7 +20,7 @@
                     <div class="fields">
                         <div class="field">
                             <label for="firstName">First name*</label>
-                            <input type="text" required id="firstName" name="firstName">
+                            <input type="text" minlength="3" required id="firstName" name="firstName">
                         </div>
                         <div class="field">
                             <label for="lastName">Last name*</label>
@@ -28,19 +28,19 @@
                         </div>
                         <div class="field">
                             <label for="email">Email*</label>
-                            <input type="email" id="email" name="email" required >
+                            <input type="email" pattern="^\w{2,}@\w{3,}\.[a-z]{3,}$" id="email" name="email" required >
                         </div>
                         <div class="field">
                             <label for="phone">Phone number</label>
-                            <input type="tel" id="phone" name="tel" >
+                            <input type="tel" pattern="^\d{10}$" id="phone" name="tel" >
                         </div>
                         <div class="field">
                             <label for="pass">Password*</label>
-                            <input type="password" id="pass" name="pass">
+                            <input type="password" pattern="^(?=.*[A-Z])[\w]{8,}$" required id="pass" name="pass">
                         </div>
                         <div class="field">
                             <label for="confirmPass">Confirm password*</label>
-                            <input type="password" id="confirmPass" name="confirmPass">
+                            <input type="password" pattern="^(?=.*[A-Z])[\w]{8,}$" required id="confirmPass" name="confirmPass">
                         </div>
                         <div class="button">
                             <button type="submit">CREATE ACCOUNT</button>
@@ -53,5 +53,6 @@
             </div>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

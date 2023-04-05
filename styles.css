@@ -39,6 +39,9 @@ h1 {
 .fields > div {
     display:flex;
     flex-direction:column;
+    align-items:center;
+}
+.fields > .button {
     align-items:flex-start;
 }
 form {
@@ -56,12 +59,16 @@ form {
     display:flex;
     justify-content:center;
     align-items:center;
+    width:100%;
 }
 .fields {
+    width:100%;
     display:grid;
     align-content:center;
     grid-template-columns:repeat(2, 1fr);
-    gap:10%;
+    align-content:space-around;
+    column-gap:10%;
+    row-gap:5%;
 }
 input {
     padding:1em 1em;
@@ -71,7 +78,7 @@ label {
     font-weight:bold;
     text-transform:uppercase;
     font-family:inherit;
-    font-size:1.1rem;
+    font-size:1rem;
 }
 
 h1 {
@@ -128,3 +135,19 @@ p {
 .anchor:hover, .anchor:active, .anchor:focus {
     color:hsl(14, 46%, 74%);
 }
+
+/* Behaviour regarding input's validty */
+input:focus {
+    outline:none;
+}
+
+.invalid {
+    color:red;
+}
+.invalidInput {
+    border:1px solid red;
+}
+.validInput {
+    border:1px solid green;
+}
+ 
