@@ -1,16 +1,21 @@
+html {
+    box-sizing:border-box;
 
-body {
+}
+body, .container {
+    background-color:#eae2b7;
     margin:0;
     padding:0;
 
-    /* width does not work */
+}
+.imageSection, .formSection {
+    height:100vh;
 }
 * {
     font-family:'Times New Roman', Times, serif
 }
 .container {
-    height:100vh;
-    width:100%;
+    min-height:100%;
     display:grid;
     grid-template-columns:40% auto;
 }
@@ -91,9 +96,20 @@ button {
 .button {
     width:210%;
 }
-@media (max-width:600px) {
+@media (max-width:800px) {
+    html {
+        overflow-y:none;
+    }
+    .imageSection, .formSection {
+        height:100vh;
+        width:100vw;
+    }
     .container {
-        grid-template-columns:50% 50%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        overflow-x:hidden;
     }
     .fields  {
         grid-template-columns:repeat(1, 1fr);
